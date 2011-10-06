@@ -16,7 +16,7 @@
   }
   
   // Current library version
-  Tree.VERSION = '0.0.1';
+  Tree.VERSION = '0.1.0';
   
   // Require Underscore if not already present
   var _ = this._;
