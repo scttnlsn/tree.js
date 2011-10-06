@@ -2,7 +2,7 @@
   "name"          : "tree",
   "version"       : "0.1.0",
   "description"   : "A JavaScript library for creating and manipulating hierarchical tree structures.",
-  "url"           : "http://github.com/scttnlsn/tree.js/",
+  "homepage"      : "http://github.com/scttnlsn/tree.js/",
   "keywords"      : ["util", "client", "browser", "server"],
   "author"        : "Scott Nelson <scottbnel@gmail.com>",
   "contributors"  : [],
