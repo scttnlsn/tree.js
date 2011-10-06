@@ -9,7 +9,7 @@ module('Tree', {
     
     this.node = new Tree.Node(this.branch);
     
-    this.tree = new Tree.Tree(
+    this.tree = new Tree.Root(
       new Tree.Branch([
         new Tree.Node(new Tree.Branch([
           new Tree.Node(),

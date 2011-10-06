@@ -106,24 +106,23 @@
     
   });
   
-  // Tree.Tree
+  // Tree.Root
   // --------------------
   
-  // A tree is composed of a root branch and a set of methods
-  // for recursively operating on the entire hierarchy of nodes
-  // and branches.
+  // A root is composed of a single branch and a set of methods
+  // for recursively operating on the entire tree hierarchy.
   
-  Tree.Tree = function(root) {
-    this.root = root || new Tree.Branch();
+  Tree.Root = function(branch) {
+    this.branch = branch || new Tree.Branch();
   };
   
-  _.extend(Tree.Tree.prototype, {
+  _.extend(Tree.Root.prototype, {
     
     // Find the node with the given ID (BFS).
     find: function(id) {
       var queue = [];
       
-      _.each(this.root.nodes, function(node) {
+      _.each(this.branch.nodes, function(node) {
         queue.push(node);
       });
       
