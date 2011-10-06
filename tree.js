@@ -68,7 +68,7 @@
     var self = this;
     _.each(nodes, function(node) {
       self.append(node);
-    })
+    });
   };
   
   _.extend(Tree.Branch.prototype, {
