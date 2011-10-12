@@ -1,6 +1,6 @@
-//  Tree.js
-//  Scott Nelson (scottbnel@gmail.com)
-//  https://github.com/scttnlsn/tree.js
+//     Tree.js
+//     Scott Nelson <scottbnel@gmail.com>
+//     https://github.com/scttnlsn/tree.js
 
 (function() {
   
