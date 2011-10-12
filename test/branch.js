@@ -55,6 +55,7 @@ test('remove node', function() {
   equals(_.first(this.branch.nodes), this.node2);
   equals(_.last(this.branch.nodes), this.node3);
   equals(node, this.node1);
+  equals(node.branch, null);
 });
 
 test('remove node at index', function() {

@@ -49,8 +49,9 @@
         throw new TypeError('Node does not belong to a branch');
       }
       
-      this.branch.remove(this);
-      this.branch.insert(i, this);
+      var branch = this.branch;
+      branch.remove(this);
+      branch.insert(i, this);
     }
     
   });
@@ -90,6 +91,8 @@
       this.nodes = _.reject(this.nodes, function(n) {
         return n.id == node.id;
       });
+      
+      node.branch = null;
       
       return node;
     },
