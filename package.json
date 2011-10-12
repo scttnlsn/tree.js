@@ -1,6 +1,6 @@
 {
   "name"          : "tree",
-  "version"       : "0.1.1",
+  "version"       : "0.1.2",
   "description"   : "A JavaScript library for creating and manipulating hierarchical tree structures.",
   "homepage"      : "http://github.com/scttnlsn/tree.js/",
   "keywords"      : ["util", "client", "browser", "server"],
