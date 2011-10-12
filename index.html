@@ -8,7 +8,7 @@ https://github.com/scttnlsn/tree.js
   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
     <span class="nx">Tree</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">Tree</span> <span class="o">=</span> <span class="p">{};</span>
   <span class="p">}</span>
-  </pre></div>             </td>           </tr>                               <tr id="section-4">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-4">&#182;</a>               </div>               <p>Current library version</p>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="nx">Tree</span><span class="p">.</span><span class="nx">VERSION</span> <span class="o">=</span> <span class="s1">&#39;0.1.1&#39;</span><span class="p">;</span>
+  </pre></div>             </td>           </tr>                               <tr id="section-4">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-4">&#182;</a>               </div>               <p>Current library version</p>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="nx">Tree</span><span class="p">.</span><span class="nx">VERSION</span> <span class="o">=</span> <span class="s1">&#39;0.1.2&#39;</span><span class="p">;</span>
   </pre></div>             </td>           </tr>                               <tr id="section-5">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-5">&#182;</a>               </div>               <p>Require Underscore if not already present</p>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="kd">var</span> <span class="nx">_</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">_</span><span class="p">;</span>
   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">_</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">require</span> <span class="o">!==</span> <span class="s1">&#39;undefined&#39;</span><span class="p">))</span> <span class="p">{</span>
     <span class="nx">_</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;underscore&#39;</span><span class="p">);</span>
@@ -32,8 +32,9 @@ a unique ID with with it can be retrieved from a tree.</p>             </td>    
         <span class="k">throw</span> <span class="k">new</span> <span class="nx">TypeError</span><span class="p">(</span><span class="s1">&#39;Node does not belong to a branch&#39;</span><span class="p">);</span>
       <span class="p">}</span>
       
-      <span class="k">this</span><span class="p">.</span><span class="nx">branch</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">branch</span><span class="p">.</span><span class="nx">insert</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+      <span class="kd">var</span> <span class="nx">branch</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">branch</span><span class="p">;</span>
+      <span class="nx">branch</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+      <span class="nx">branch</span><span class="p">.</span><span class="nx">insert</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
     <span class="p">}</span>
     
   <span class="p">});</span>
@@ -62,6 +63,8 @@ nodes.</p>             </td>             <td class="code">               <div cl
       <span class="k">this</span><span class="p">.</span><span class="nx">nodes</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">nodes</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">return</span> <span class="nx">n</span><span class="p">.</span><span class="nx">id</span> <span class="o">==</span> <span class="nx">node</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
       <span class="p">});</span>
+      
+      <span class="nx">node</span><span class="p">.</span><span class="nx">branch</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
       
       <span class="k">return</span> <span class="nx">node</span><span class="p">;</span>
     <span class="p">},</span>
