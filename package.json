@@ -7,5 +7,12 @@
   "author"        : "Scott Nelson <scottbnel@gmail.com>",
   "contributors"  : [],
   "dependencies"  : ["underscore"],
-  "main"          : "index"
+  "main"          : "index",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scttnlsn/tree.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/scttnlsn/tree.js/issues"
+  }
 }
