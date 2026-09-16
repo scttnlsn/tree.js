@@ -6,7 +6,9 @@
   "keywords"      : ["util", "client", "browser", "server"],
   "author"        : "Scott Nelson <scottbnel@gmail.com>",
   "contributors"  : [],
-  "dependencies"  : ["underscore"],
+  "dependencies"  : {
+    "underscore": "^1.13.2"
+  },
   "main"          : "index",
   "repository": {
     "type": "git",
